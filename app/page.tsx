@@ -25,7 +25,7 @@ const Home: React.FC<HomeProps> = () => {
           </div>
           <div>
             <h1 className='font-bold text-[35px] text-center px-24 mt-5'>EmbedAIoT has put an end to guess work with its<span className="text-blue-400"> Automated Temperature Monitoring System</span></h1>
-            <div className="px-10 text-gray-300">
+            <div className="px-10">
               <p className='mt-5 text-md text-justify'>
                   Everyone knows that food safety is one of the most important element for businesses in the food industry.
               </p>
@@ -50,7 +50,7 @@ const Home: React.FC<HomeProps> = () => {
         </div>
         <div>
             <h1 className='font-bold text-[35px] text-center px-24 pt-5'>Savings<span className="text-blue-400"> Estimator</span></h1>
-            <div className='text-gray-300'>
+            <div>
               <p className='mt-5 text-md text-justify'>
                   Relying on traditional methods to monitor and record temperature readings can result in various issues and challenges.
               </p>

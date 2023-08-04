@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export function SiteFooter() {
   return (
-    <footer className="border-t px-10 py-10 text-white">
+    <footer className="border-t px-10 py-10">
       <Image 
           src="/Embed-Blue-Dark.png"
           alt="EmbedAIoT"
