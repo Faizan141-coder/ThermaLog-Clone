@@ -1,84 +1,96 @@
-import { client } from "@/sanity/lib/client"
-import { groq } from "next-sanity"
+'use client'
 
-import { SanityProduct } from "@/config/inventory"
-import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
-import { ProductFilters } from "@/components/product-filters"
-import { ProductGrid } from "@/components/product-grid"
-import { ProductSort } from "@/components/product-sort"
-import { seedSanityData } from "@/lib/seed"
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 
-interface Props {
-  searchParams: {
-    date?: string
-    price?: string
-    color?: string
-    category?: string
-    size?: string
-    search?: string
-  }
+interface HomeProps {
+  // Add any additional props if required.
 }
 
-export default async function Page({ searchParams }: Props) {
-
-  const { date = "desc", price, color, category, size, search } = searchParams
-  const priceOrder = price ? `| order(price ${price})` : ''
-  const dateOrder = date ? `| order(_createdAt ${date})` : ''
-  const order = `${priceOrder}${dateOrder}`
-
-  const productFilter = `_type == "product"`
-  const colorFilter = color ? `&& '${color}' in colors` : ''
-  const categoryFilter = category ? `&& '${category}' in categories` : ''
-  const sizeFilter = size ? `&& '${size}' in sizes` : ''
-  const searchFilter = search ? `&& name match '${search}' ` : ''
-  const filter = `*[${productFilter}${colorFilter}${categoryFilter}${sizeFilter}${searchFilter}]`
-
-  const products = await client.fetch<SanityProduct[]>(
-    groq`${filter} ${order} {
-      _id,
-      _createdAt,
-      name,
-      sku,
-      images,
-      currency,
-      price,
-      description,
-      "slug": slug.current,
-    }`
-  )
+const Home: React.FC<HomeProps> = () => {
+  const router = useRouter();
 
   return (
     <div>
-      <div className="px-4 pt-20 text-center">
-        <h1 className="text-4xl font-extrabold tracking-normal">{siteConfig.name}</h1>
-        <p className="mx-auto mt-4 max-w-3xl text-base">{siteConfig.description}</p>
-      </div>
+      {/* <Navbar /> */}
       <div>
-        <main className="mx-auto max-w-6xl px-6">
-          <div className="flex items-center justify-between border-b border-gray-200 pb-4 pt-24 dark:border-gray-800">
-            <h1 className="text-xl font-bold tracking-tight sm:text-2xl">
-              {products.length} result{products.length === 1 ? "" : "s"}
-            </h1>
-            {/* Product Sort */}
-            <ProductSort />
+        <div className='px-52 my-10'>
+          <div>
+            <Image 
+              src='/EmbedBackg-2.png'
+              alt='EmbedAIoT Background'
+              width={3000}
+              height={500}
+            />
           </div>
-
-          <section aria-labelledby="products-heading" className="pb-24 pt-6">
-            <h2 id="products-heading" className="sr-only">
-              Products
-            </h2>
-            <div className={cn("grid grid-cols-1 gap-x-8 gap-y-10", products.length > 0 ? 'lg:grid-cols-4' : 'lg:grid-cols-[1fr_3fr]')}>
-              <div className="hidden lg:block">
-                {/* Product filters */}
-                <ProductFilters />
+          <div>
+            <h1 className='font-bold text-[35px] text-center px-24 mt-5'>EmbedAIoT has put an end to guess work with its<span className="text-blue-400"> Automated Temperature Monitoring System</span></h1>
+            <div className="px-10 text-gray-300">
+              <p className='mt-5 text-md text-justify'>
+                  Everyone knows that food safety is one of the most important element for businesses in the food industry.
+              </p>
+              <p className='mt-5 text-md text-justify'>
+                  With the constant threat of financial penalties, stock losses, and poor food handling and hygiene practices, it’s essential for businesses to stay on top of regulations to protect the health and safety of consumers.
+              </p>
+              <p className='mt-5 text-md text-justify'>
+                  That’s why we developed our temperature monitoring system. Our system helps businesses stay compliant with government regulations for food safety, address the two-hour/four-hour rule, prevent stock losses with real-time pre-spoilage alerts, keep stock fresh with accurate temperature results and stay ahead of food safety with estimated bacterial growth monitoring.
+              </p>
+              <p className='mt-5 text-md text-justify'>
+                  With our temperature monitoring system, you can say goodbye to operational headaches and save costs like labor, financial penalties and the time for recording temperature manually.
+              </p>
+              <div className="flex justify-center items-center pt-5">
+                  <button onClick={() => router.push('/resources/guide')} className="rounded-full font-bold bg-white text-blue-500 border border-blue-500 hover:bg-blue-500 hover:text-white px-6 py-2 transition">
+                      Learn More
+                  </button>
               </div>
-              {/* Product grid */}
-              <ProductGrid products={products}/>              
+              <div className="flex justify-center">
+                  <div className="w-full h-[0.3px] bg-blue-500 mt-8" />
+              </div>
             </div>
-          </section>
-        </main>
+        </div>
+        <div>
+            <h1 className='font-bold text-[35px] text-center px-24 pt-5'>Savings<span className="text-blue-400"> Estimator</span></h1>
+            <div className='text-gray-300'>
+              <p className='mt-5 text-md text-justify'>
+                  Relying on traditional methods to monitor and record temperature readings can result in various issues and challenges.
+              </p>
+              <p className='mt-5 text-md text-justify'>
+                  <span className="text-blue-400 font-bold">1. </span>It can be costly, especially for multiple appliances or large areas
+              </p>
+              <p className='mt-2 text-md text-justify'>
+                  <span className="text-blue-400 font-bold">2. </span>Human error may occur while reading and recording data
+              </p>
+              <p className='mt-2 text-md text-justify'>
+                  <span className="text-blue-400 font-bold">3. </span>Timing is crucial; incidents between checks can lead to stock loss
+              </p>
+              <p className='mt-2 text-md text-justify'>
+                  <span className="text-blue-400 font-bold">4. </span>Storing physical data takes up significant space.
+              </p>
+              <p className='mt-5 text-md text-justify'>
+                  Use our saving calculator to calculate how much you can save daily and per annum by simply installing the automated temperature monitoring system.
+              </p>
+              <p className='mt-5 text-md text-justify'>
+                  Contact us today to learn more about our solution and take the first step towards automating your temperature monitoring process.
+              </p>
+            </div>
+        </div>
+          <div>
+            <Image 
+              src='/EmbedBackg.png'
+              alt='EmbedAIoT Background'
+              width={3000}
+              height={500}
+              className="mt-10"
+            />
+            <div className="flex justify-center">
+              <div className="w-full h-[0.3px] bg-blue-500 mt-8" />
+            </div>
+          </div>
+        </div>
       </div>
+      {/* <Footer /> */}
     </div>
-  )
+  );
 }
+
+export default Home;

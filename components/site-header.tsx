@@ -37,11 +37,10 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between space-x-4 px-6 sm:space-x-0">
         <MainNav />
 
-        <Link href="/?search=bag">Bags</Link>
-        <Link href="/?search=belt">Belts</Link>
-        <Link href="/?search=gloves">Gloves</Link>
-        <Link href="/?search=scarf">Scarfs</Link>
-        <Link href="/?search=sunglasses">Glasses</Link>
+        <h1 className="cursor-pointer" onClick={() => router.push('/')}>Home</h1>
+        <h1 className="cursor-pointer" onClick={() => router.push('/shop')}>Products</h1>
+        <h1 className="cursor-pointer" onClick={() => router.push('/company/about')}>Company</h1>
+        <h1 className="cursor-pointer" onClick={() => router.push('/')}>Resources</h1>
 
         <div className="flex items-center space-x-1">
           <Button
