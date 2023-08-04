@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
-import { Edit, SearchIcon, ShoppingBag } from "lucide-react"
+import { ChevronDown, Edit, SearchIcon, ShoppingBag } from "lucide-react"
 import { useShoppingCart } from "use-shopping-cart"
 import { useState } from "react"
 import { UserButton } from "@clerk/nextjs";
@@ -21,6 +21,26 @@ export function SiteHeader() {
   const defaultSearchQuery = searchParams.get('search') || ''
   const [isInputVisible, setIsInputVisible] = useState(false);
 
+  const [showProductsDropdown, setShowProductsDropdown] = useState(false);
+  const [showCompanyDropdown, setShowCompanyDropdown] = useState(false);
+  const [showResourcesDropdown, setShowResourcesDropdown] = useState(false);
+
+  const toggleDropdown = (dropdownName: string) => {
+    switch (dropdownName) {
+      case 'products':
+        setShowProductsDropdown(!showProductsDropdown);
+        break;
+      case 'company':
+        setShowCompanyDropdown(!showCompanyDropdown);
+        break;
+      case 'resources':
+        setShowResourcesDropdown(!showResourcesDropdown);
+        break;
+      default:
+        break;
+    }
+  }
+
   if (pathname.startsWith("/studio")) {
     return null
   }
@@ -29,7 +49,7 @@ export function SiteHeader() {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const searchQuery = formData.get("search");
-    router.replace(`/?search=${searchQuery}`);
+    router.replace(`/shop?search=${searchQuery}`);
   };
 
   return (
@@ -39,8 +59,40 @@ export function SiteHeader() {
 
         <h1 className="cursor-pointer" onClick={() => router.push('/')}>Home</h1>
         <h1 className="cursor-pointer" onClick={() => router.push('/shop')}>Products</h1>
-        <h1 className="cursor-pointer" onClick={() => router.push('/company/reviews')}>Company</h1>
-        <h1 className="cursor-pointer" onClick={() => router.push('/resources/guide')}>Resources</h1>
+        <h1 className="cursor-pointer">
+          <div
+            className='relative'
+            onMouseEnter={() => toggleDropdown('company')}
+            onMouseLeave={() => toggleDropdown('company')}
+          >
+            <h1 className='flex cursor-pointer'>
+              Compnay <ChevronDown />
+            </h1>
+            {showCompanyDropdown && (
+              <div className="absolute top-full left-0 bg-sky-50 text-black rounded-md" style={{ whiteSpace: 'nowrap'}}>
+                <p onClick={() => router.push('/company/about')} className="hover:bg-blue-400 hover:text-white cursor-pointer px-5 py-2 rounded-md">About Us</p>
+                <p onClick={() => router.push('/company/reviews')} className="hover:bg-blue-400 hover:text-white cursor-pointer px-5 py-2 rounded-md">Client Reviews</p>
+              </div>
+            )}
+          </div>
+        </h1>
+        <h1 className="cursor-pointer">
+          <div
+            className='relative'
+            onMouseEnter={() => toggleDropdown('resources')}
+            onMouseLeave={() => toggleDropdown('resources')}
+          >
+            <h1 className='flex cursor-pointer'>
+              Resources <ChevronDown />
+            </h1>
+            {showResourcesDropdown && (
+              <div className="absolute top-full left-0 bg-sky-50 text-black rounded-md" style={{ whiteSpace: 'nowrap'}}>
+                <p onClick={() => router.push('/resources/guide')} className="hover:bg-blue-400 hover:text-white cursor-pointer px-5 py-2 rounded-md">Application & Software Guide</p>
+                <p onClick={() => router.push('/resources/faqs')} className="hover:bg-blue-400 hover:text-white cursor-pointer px-5 py-2 rounded-md">FAQs</p>
+              </div>
+            )}
+          </div>
+        </h1>
 
         <div className="flex items-center space-x-1">
           <Button
@@ -78,7 +130,7 @@ export function SiteHeader() {
             </Button>
           </Link>
 
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
 
           {process.env.NODE_ENV === "development" && (
             <Link href="/studio">
@@ -88,8 +140,7 @@ export function SiteHeader() {
             </Link>
           )}
           <UserButton afterSignOutUrl="/" />
-
-        </div>
+      </div>
       </div>
     </header>
   );
