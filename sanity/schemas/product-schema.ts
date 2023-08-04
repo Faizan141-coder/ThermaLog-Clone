@@ -25,26 +25,36 @@ export const product = defineType({
             of: [{ type: "image" }]
         },
         {
-            name: "categories",
-            title: "Categories",
+            name: "features",
+            title: "Features",
             type: "array",
             of: [{ type: "string" }]
         },
         {
-            name: "sizes",
-            title: "Sizes",
+            name: "sensingRanges",
+            title: "Sensing Ranges",
             type: "array",
             of: [{ type: "string" }]
         },
         {
-            name: "colors",
-            title: "Colors",
+            name: "applications",
+            title: "Applications",
             type: "array",
             of: [{ type: "string" }]
         },
         {
             name: "description",
             title: "Description",
+            type: "string"
+        },
+        {
+            name: "description1",
+            title: "Description1",
+            type: "string"
+        },
+        {
+            name: "description2",
+            title: "Description2",
             type: "string"
         },
         {

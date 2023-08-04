@@ -14,7 +14,7 @@ interface Props {
   product: SanityProduct
 }
 
-export function ProductInfo({ product }: Props) {
+export function ProductInfoDetails({ product }: Props) {
 
   const { addItem, incrementItem, cartDetails } = useShoppingCart()
   const { toast } = useToast()
@@ -41,30 +41,44 @@ export function ProductInfo({ product }: Props) {
 
   return (
     <div className="mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0">
-      <h1 className="text-3xl font-bold tracking-tight">{product.name}</h1>
 
-      <div className="mt-3">
-        <h2 className="sr-only">Product information</h2>
-        <p className="text-3xl tracking-tight">{formatCurrencyString({ value: product.price, currency: product.currency })}</p>
+      <div>
+        <h3 className="text-2xl font-bold mb-4">Description</h3>
+        <div>{product.description1}</div>
       </div>
 
       <div className="mt-6">
-        <h3 className="sr-only">Info</h3>
-        <div className="space-y-6 text-base">{product.description}</div>
+        <h3 className="sr-only">Description</h3>
+        <div>{product.description2}</div>
+      </div>
+      
+      <div className="mt-10">
+        <h3 className="text-2xl font-bold">Features</h3>
+        <ul className="mt-4 list-disc list-inside space-y-2">
+          {product.features.map((feature, index) => (
+            <li key={index}>{feature}</li>
+          ))}
+        </ul>
       </div>
 
-      <form className="mt-6">
-        <div className="mt-4 flex">
-          <Button
-            type="button"
-            onClick={addToCart}
-            className="w-full bg-violet-600 py-6 text-base font-medium text-white hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-500"
-          >
-            Add to cart
-          </Button>
-        </div>
-      </form>
+      <div className="mt-10">
+        <h3 className="text-2xl font-bold">Sensing Ranges</h3>
+        <ul className="mt-4 list-disc list-inside space-y-2">
+          {product.sensingRanges.map((range, index) => (
+            <li key={index}>{range}</li>
+          ))}
+        </ul>
+      </div>
 
-    </div> 
+      <div className="my-10">
+        <h3 className="text-2xl font-bold">Applications</h3>
+        <ul className="mt-4 list-disc list-inside space-y-2">
+          {product.applications.map((application, index) => (
+            <li key={index}>{application}</li>
+          ))}
+        </ul>
+      </div>
+
+    </div>
   )
 }
