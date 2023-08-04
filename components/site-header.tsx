@@ -39,8 +39,8 @@ export function SiteHeader() {
 
         <h1 className="cursor-pointer" onClick={() => router.push('/')}>Home</h1>
         <h1 className="cursor-pointer" onClick={() => router.push('/shop')}>Products</h1>
-        <h1 className="cursor-pointer" onClick={() => router.push('/company/about')}>Company</h1>
-        <h1 className="cursor-pointer" onClick={() => router.push('/')}>Resources</h1>
+        <h1 className="cursor-pointer" onClick={() => router.push('/company/reviews')}>Company</h1>
+        <h1 className="cursor-pointer" onClick={() => router.push('/resources/guide')}>Resources</h1>
 
         <div className="flex items-center space-x-1">
           <Button
