@@ -3,13 +3,6 @@ import Image from "next/image"
 export function SiteFooter() {
   return (
     <footer className="border-t px-10 py-10">
-      <Image 
-          src="/Embed-Blue-Dark.png"
-          alt="EmbedAIoT"
-          width={200}
-          height={50}
-          className="flex items-center justify-center mx-auto mb-5"
-      />
       <div className="text-center">
         <h1 className="font-bold text-[40px]">EmbedAIoT</h1>
       </div>
