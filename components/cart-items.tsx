@@ -8,7 +8,7 @@ import { formatCurrencyString, useShoppingCart } from "use-shopping-cart"
 import { Product } from "use-shopping-cart/core"
 
 import { shimmer, toBase64 } from "@/lib/image"
-import { getSizeName } from "@/lib/utils"
+// import { getSizeName } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { useToast } from "@/components/ui/use-toast"
@@ -63,10 +63,10 @@ export function CartItems() {
                   </h3>
                 </div>
                 <p className="mt-1 text-sm font-medium">{formatCurrencyString({ value: product.price, currency: product.currency })}</p>
-                <p className="mt-1 text-sm font-medium">
-                  Size: {/* @ts-ignore */}
+                {/* <p className="mt-1 text-sm font-medium">
+                  Size: 
                   <strong>{getSizeName(product.product_data?.size)}</strong>
-                </p>
+                </p> */}
               </div>
 
               <div className="mt-4 sm:mt-0 sm:pr-9">

@@ -14,7 +14,7 @@ const Home: React.FC<HomeProps> = () => {
     <div>
       {/* <Navbar /> */}
       <div>
-        <div className='px-52 my-10'>
+        <div className='my-10 px-52'>
           <div>
             <Image 
               src='/EmbedBackg-2.png'
@@ -24,9 +24,9 @@ const Home: React.FC<HomeProps> = () => {
             />
           </div>
           <div>
-            <h1 className='font-bold text-[35px] text-center px-24 mt-5'>EmbedAIoT has put an end to guess work with its<span className="text-blue-400"> Automated Temperature Monitoring System</span></h1>
+            <h1 className='mt-5 px-24 text-center text-[35px] font-bold'>EmbedAIoT has put an end to guess work with its<span className="text-blue-400"> Automated Temperature Monitoring System</span></h1>
             <div className="px-10">
-              <p className='mt-5 text-md text-justify'>
+              <p className='text-md mt-5 text-justify'>
                   Everyone knows that food safety is one of the most important element for businesses in the food industry.
               </p>
               <p className='mt-5 text-md text-justify'>

@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react"
 import { formatCurrencyString, useShoppingCart } from "use-shopping-cart"
 
 import { SanityProduct } from "@/config/inventory"
-import { getSizeName } from "@/lib/utils"
+// import { getSizeName } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { useToast } from "@/components/ui/use-toast"
 

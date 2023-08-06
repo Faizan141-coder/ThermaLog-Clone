@@ -69,9 +69,9 @@ export function SiteHeader() {
               Compnay <ChevronDown />
             </h1>
             {showCompanyDropdown && (
-              <div className="absolute top-full left-0 bg-sky-50 text-black rounded-md" style={{ whiteSpace: 'nowrap'}}>
-                <p onClick={() => router.push('/company/about')} className="hover:bg-blue-400 hover:text-white cursor-pointer px-5 py-2 rounded-md">About Us</p>
-                <p onClick={() => router.push('/company/reviews')} className="hover:bg-blue-400 hover:text-white cursor-pointer px-5 py-2 rounded-md">Client Reviews</p>
+              <div className="absolute left-0 top-full rounded-md bg-sky-50 text-black" style={{ whiteSpace: 'nowrap'}}>
+                <p onClick={() => router.push('/company/about')} className="cursor-pointer rounded-md px-5 py-2 hover:bg-blue-400 hover:text-white">About Us</p>
+                <p onClick={() => router.push('/company/reviews')} className="cursor-pointer rounded-md px-5 py-2 hover:bg-blue-400 hover:text-white">Client Reviews</p>
               </div>
             )}
           </div>
@@ -86,9 +86,9 @@ export function SiteHeader() {
               Resources <ChevronDown />
             </h1>
             {showResourcesDropdown && (
-              <div className="absolute top-full left-0 bg-sky-50 text-black rounded-md" style={{ whiteSpace: 'nowrap'}}>
-                <p onClick={() => router.push('/resources/guide')} className="hover:bg-blue-400 hover:text-white cursor-pointer px-5 py-2 rounded-md">Application & Software Guide</p>
-                <p onClick={() => router.push('/resources/faqs')} className="hover:bg-blue-400 hover:text-white cursor-pointer px-5 py-2 rounded-md">FAQs</p>
+              <div className="absolute left-0 top-full rounded-md bg-sky-50 text-black" style={{ whiteSpace: 'nowrap'}}>
+                <p onClick={() => router.push('/resources/guide')} className="cursor-pointer rounded-md px-5 py-2 hover:bg-blue-400 hover:text-white">Application & Software Guide</p>
+                <p onClick={() => router.push('/resources/faqs')} className="cursor-pointer rounded-md px-5 py-2 hover:bg-blue-400 hover:text-white">FAQs</p>
               </div>
             )}
           </div>
