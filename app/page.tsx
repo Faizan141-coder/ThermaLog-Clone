@@ -12,9 +12,10 @@ const Home: React.FC<HomeProps> = () => {
 
   return (
     <div>
-      {/* <Navbar /> */}
+      
       <div>
         <div className='my-10 px-52'>
+
           <div>
             <Image 
               src='/EmbedBackg-2.png'
@@ -23,8 +24,10 @@ const Home: React.FC<HomeProps> = () => {
               height={500}
             />
           </div>
+
           <div>
             <h1 className='mt-5 px-24 text-center text-[35px] font-bold'>EmbedAIoT has put an end to guess work with its<span className="text-blue-400"> Automated Temperature Monitoring System</span></h1>
+            
             <div className="px-10">
               <p className='text-md mt-5 text-justify'>
                   Everyone knows that food safety is one of the most important element for businesses in the food industry.
@@ -38,16 +41,21 @@ const Home: React.FC<HomeProps> = () => {
               <p className='mt-5 text-md text-justify'>
                   With our temperature monitoring system, you can say goodbye to operational headaches and save costs like labor, financial penalties and the time for recording temperature manually.
               </p>
+              
               <div className="flex justify-center items-center pt-5">
                   <button onClick={() => router.push('/resources/guide')} className="rounded-full font-bold bg-white text-blue-500 border border-blue-500 hover:bg-blue-500 hover:text-white px-6 py-2 transition">
                       Learn More
                   </button>
               </div>
+
               <div className="flex justify-center">
                   <div className="w-full h-[0.3px] bg-blue-500 mt-8" />
               </div>
+
             </div>
-        </div>
+
+          </div>
+
         <div>
             <h1 className='font-bold text-[35px] text-center px-24 pt-5'>Savings<span className="text-blue-400"> Estimator</span></h1>
             <div>
@@ -86,9 +94,27 @@ const Home: React.FC<HomeProps> = () => {
               <div className="w-full h-[0.3px] bg-blue-500 mt-8" />
             </div>
           </div>
-        </div>
-      </div>
-      {/* <Footer /> */}
+          <div>
+          <h1 className='px-24 pt-5 text-center text-4xl font-bold'>Our<span className="text-blue-400"> Partners</span></h1>
+          <div className="flex flex-wrap items-start justify-between">
+            <Image src='/partner-logo-2.png' alt='VGreen' width={100} height={10} className="mt-20" />
+            <Image src='/partner-logo-3.png' alt='National Incubation Center' width={100} height={10} className="mt-10" />
+            <Image src='/partner-logo-4.png' alt='PFAN' width={100} height={10} className="mt-20" />
+            <Image src='/partner-logo-5.png' alt='Green Tech' width={100} height={10} className="mt-10"  />
+            <Image src='/Microsoft-Logo.png' alt='Microsoft' width={100} height={10} className="mt-20" />
+          </div>
+          </div>
+          <h1 className='mt-5 px-24 pt-5 text-center text-4xl font-bold'>Our<span className="text-blue-400"> Investors</span></h1>
+          <div className="flex flex-wrap items-start justify-between">
+            <Image src='/Asset1.jpg' alt='VGreen' width={100} height={10} className="mt-14" />
+            <Image src='/Asset-2.jpg' alt='National Incubation Center' width={100} height={10} className="mt-10" />
+            <Image src='/Asset-3.jpg' alt='PFAN' width={100} height={10} className="mt-14" />
+            <Image src='/Asset-4.jpg' alt='Green Tech' width={100} height={10} className="mt-10"  />
+            <Image src='/Asset-5.jpg' alt='Microsoft' width={100} height={10} className="mt-10" />
+          </div>
+    </div>
+        
+    </div>
     </div>
   );
 }
