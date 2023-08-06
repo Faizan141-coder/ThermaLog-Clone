@@ -95,14 +95,14 @@ const Home: React.FC<HomeProps> = () => {
             </div>
           </div>
           <div>
-          <h1 className='px-24 pt-5 text-center text-4xl font-bold'>Our<span className="text-blue-400"> Partners</span></h1>
-          <div className="flex flex-wrap items-start justify-between">
-            <Image src='/partner-logo-2.png' alt='VGreen' width={100} height={10} className="mt-20" />
-            <Image src='/partner-logo-3.png' alt='National Incubation Center' width={100} height={10} className="mt-10" />
-            <Image src='/partner-logo-4.png' alt='PFAN' width={100} height={10} className="mt-20" />
-            <Image src='/partner-logo-5.png' alt='Green Tech' width={100} height={10} className="mt-10"  />
-            <Image src='/Microsoft-Logo.png' alt='Microsoft' width={100} height={10} className="mt-20" />
-          </div>
+            <h1 className='px-24 pt-5 text-center text-4xl font-bold'>Our<span className="text-blue-400"> Partners</span></h1>
+            <div className="flex flex-wrap items-start justify-between">
+              <Image src='/partner-logo-2.png' alt='VGreen' width={100} height={10} className="mt-20" />
+              <Image src='/partner-logo-3.png' alt='National Incubation Center' width={100} height={10} className="mt-10" />
+              <Image src='/partner-logo-4.png' alt='PFAN' width={100} height={10} className="mt-20" />
+              <Image src='/partner-logo-5.png' alt='Green Tech' width={100} height={10} className="mt-10"  />
+              <Image src='/Microsoft-Logo.png' alt='Microsoft' width={100} height={10} className="mt-20" />
+            </div>
           </div>
           <h1 className='mt-5 px-24 pt-5 text-center text-4xl font-bold'>Our<span className="text-blue-400"> Investors</span></h1>
           <div className="flex flex-wrap items-start justify-between">
