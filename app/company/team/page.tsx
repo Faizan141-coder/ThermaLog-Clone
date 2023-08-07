@@ -14,20 +14,39 @@ const Page: React.FC = () => {
         </div>
         <h1 className='mt-10 px-24 pt-5 text-center text-4xl font-bold'><span className="text-blue-400">Board</span></h1>
         <div className="mt-5 flex flex-wrap items-start space-x-10">
-            <Image src='/persons/1.jpeg' alt='VGreen' width={150} height={30} className="rounded-md" />
-            <Image src='/persons/2.jpg' alt='National Incubation Center' width={150} height={30} className="rounded-md" />
+            <div>
+            <Image src='/persons/1.jpeg' alt='Dr. Shehzad Younas' width={150} height={30} className="rounded-md" />
+            <p className="text-center">Dr. Shehzad Younas</p>
+            </div>
+            <div>
+              <Image src='/persons/22.jpg' alt='Muhammad Kashif' width={150} height={30} className="rounded-md" />
+              <p className="text-center">Muhammad Kashif</p>
+            </div>
         </div>
         <h1 className='mt-5 px-24 pt-5 text-center text-4xl font-bold'><span className="text-blue-400">Design Engineer</span></h1>
         <div className="mt-5 flex flex-wrap items-start space-x-10">
-            <Image src='/persons/3.jpeg' alt='VGreen' width={150} height={30} className="rounded-md" />
+            <div>
+              <Image src='/persons/3.jpeg' alt='Muhammad Tayyab' width={150} height={30} className="rounded-md" />
+              <p className="text-center">Muhammad Tayyab</p>
+            </div>
+            <div>
+              <Image src='/persons/Muhammad-Uzair.jpeg' alt='Muhammad Uzair' width={150} height={30} className="rounded-md" />
+              <p className="text-center">Muhammad Uzair</p>
+            </div>
         </div>
         <h1 className='mt-5 px-24 pt-5 text-center text-4xl font-bold'><span className="text-blue-400">Product Designer</span></h1>
         <div className="my-5 flex flex-wrap items-start space-x-10">
-            <Image src='/persons/4.png' alt='VGreen' width={150} height={30} className="mb-2 rounded-md" />
+            <div>
+              <Image src='/persons/4.png' alt='Naveen Akbar' width={150} height={30} className="mb-2 rounded-md" />
+              <p className="text-center">Naveen Akbar</p>
+            </div>
         </div>
         <h1 className='mt-5 px-24 pt-5 text-center text-4xl font-bold'><span className="text-blue-400">Media Manager</span></h1>
         <div className="mt-5 flex flex-wrap items-start space-x-10">
-            <Image src='/persons/5.jpg' alt='VGreen' width={150} height={30} className="rounded-lg" />
+            <div>
+              <Image src='/persons/55.jpg' alt='Nida Nabeel' width={150} height={30} className="rounded-lg" />
+              <p className="text-center">Nida Nabeel</p>
+            </div>
         </div>
       </div>
       
