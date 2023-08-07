@@ -51,7 +51,7 @@ export function ProductFilters() {
 
   const searchParams = useSearchParams()
   const router = useRouter()
-  const searchValues = Array.from(searchParams.entries())
+  // const searchValues = Array.from(searchParams.entries())
 
   return (
     <form className="sticky top-20">
@@ -64,7 +64,7 @@ export function ProductFilters() {
               <span>
                 {section.name}{" "}
                 <span className="ml-1 text-xs font-extrabold uppercase text-gray-400">
-                  {searchParams.get(section.id) ? `(${searchParams.get(section.id)})` : ''}
+                  {/* {searchParams.get(section.id) ? `(${searchParams.get(section.id)})` : ''} */}
                 </span>
               </span>
             </AccordionTrigger>
@@ -77,12 +77,12 @@ export function ProductFilters() {
                   >
                     <Checkbox 
                       id={`filter-${section.id}-${optionIdx}`} 
-                      checked={searchValues.some(([key, value]) => key === section.id && value === option.value)}
+                      // checked={searchValues.some(([key, value]) => key === section.id && value === option.value)}
                       onClick={(event) => {
-                          const params = new URLSearchParams(searchParams)
-                          const checked = event.currentTarget.dataset.state === 'checked'
-                          checked ? params.delete(section.id) : params.set(section.id, option.value)
-                          router.replace(`/shop?${params.toString()}`)
+                          // const params = new URLSearchParams(searchParams)
+                          // const checked = event.currentTarget.dataset.state === 'checked'
+                          // checked ? params.delete(section.id) : params.set(section.id, option.value)
+                          // router.replace(`/shop?${params.toString()}`)
                         }
                       } 
                     />

@@ -52,7 +52,7 @@ export function ProductSort() {
               Narrow your product search using the options below.
             </SheetDescription>
           </SheetHeader>
-          <ProductFilters />
+          {/* <ProductFilters /> */}
         </SheetContent>
         {/* <SheetTrigger className="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden">
           <span className="sr-only">Filters</span>

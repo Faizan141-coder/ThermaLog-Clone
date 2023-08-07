@@ -18,7 +18,7 @@ export function SiteHeader() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const { cartCount } = useShoppingCart()
-  const defaultSearchQuery = searchParams.get('search') || ''
+  // const defaultSearchQuery = searchParams.get('search') || ''
   const [isInputVisible, setIsInputVisible] = useState(false);
 
   const [showProductsDropdown, setShowProductsDropdown] = useState(false);
@@ -41,9 +41,9 @@ export function SiteHeader() {
     }
   }
 
-  if (pathname.startsWith("/studio")) {
-    return null
-  }
+  // if (pathname.startsWith("/studio")) {
+  //   return null
+  // }
 
   const onSubmit = (event: React.SyntheticEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -115,7 +115,7 @@ export function SiteHeader() {
                 autoComplete="off"
                 placeholder="Search products..."
                 className="h-9 lg:w-[300px]"
-                defaultValue={defaultSearchQuery}
+                // defaultValue={defaultSearchQuery}
               />
               <Button size="sm" variant="ghost" className="hidden">
                 <SearchIcon className="h-5 w-5" />
