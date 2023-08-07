@@ -36,9 +36,26 @@ export const inventory: InventoryProduct[] = [
       "/products/smart-energy-monitoring-device/2.jepg",
       "/products/smart-energy-monitoring-device/3.jepg",
     ],
-    features: ["Measures more than 23 energy parameters", 'Monitors upto four, 3 phase devices.', 'Power factor, Frequency Monitoring', 'Real-Time Wireless Technology', 'AI enabled Dashboard'],
-    sensingRanges: ["Instantaneous Energy for Phases 1, 2 & 3: 0 to 10s kJoules Power", 'Factor: 0 to 1 Frequency of Energy', 'Line: 50/60 Hz', 'Current Amperes: 0 to 1000'],
-    applications: ["Energy auditing and management: Monitor energy usage", 'Load monitoring and optimization: Optimize energy usage', 'Equipment maintenance: Detect electrical faults', 'Power quality analysis: Analyze power quality parameters', 'Compliance with regulations: Ensure regulatory compliance'],
+    features: [
+      "Measures more than 23 energy parameters", 
+      'Monitors upto four, 3 phase devices.', 
+      'Power factor, Frequency Monitoring', 
+      'Real-Time Wireless Technology', 
+      'AI enabled Dashboard'
+    ],
+    sensingRanges: [
+      "Instantaneous Energy for Phases 1, 2 & 3: 0 to 10s kJoules Power", 
+      'Factor: 0 to 1 Frequency of Energy', 
+      'Line: 50/60 Hz', 
+      'Current Amperes: 0 to 1000'
+    ],
+    applications: [
+      "Energy auditing and management: Monitor energy usage", 
+      'Load monitoring and optimization: Optimize energy usage', 
+      'Equipment maintenance: Detect electrical faults', 
+      'Power quality analysis: Analyze power quality parameters', 
+      'Compliance with regulations: Ensure regulatory compliance'
+    ],
     description1: 'The Smart Energy Meter is backboned by the IoT framework and sends data to the cloud server. An AI embedded rich dashboard is provided with historic profiles, forecasting tools, curtail information, and analytics to alerts/notifications help users to generate which device making and strategies to decision mitigation conserve consumption and energy utilize energy resources effectively.',
     description2: 'The Energy Metering device is intended to monitor critical Electricity Energy parameters to estimate the energy being consumed by the user. ',
     currency: "USD",
@@ -56,9 +73,20 @@ export const inventory: InventoryProduct[] = [
       "/products/agri-farm-multimeter/3.jpeg",
       "/products/agri-farm-multimeter/4.jpeg",
     ],
-    features: ["Standalone Solar Powered Device", 'Measures Temperature, Gaseous, Parameters, Humidity and more', 'Low Power consumption', 'GRM and GPRS support'],
-    sensingRanges: ["Soil Moisture:  ±5% accuracy and 0.1% resolution", 'Temperature:  -20 TO 60 °C WITH ±0.5 °C ERROR.', 'Relative Humidity:  0 – 100'],
-    applications: ["Agricultural Usage", 'Progresssive Farmers'],
+    features: [
+      "Standalone Solar Powered Device", 
+      'Measures Temperature, Gaseous, Parameters, Humidity and more', 
+      'Low Power consumption', 'GRM and GPRS support'
+    ],
+    sensingRanges: [
+      "Soil Moisture:  ±5% accuracy and 0.1% resolution", 
+      'Temperature:  -20 TO 60 °C WITH ±0.5 °C ERROR.', 
+      'Relative Humidity:  0 – 100'
+    ],
+    applications: [
+      "Agricultural Usage", 
+      'Progresssive Farmers'
+    ],
     description1: 'A Battery-Powered handheld smart meter that can be deployed in fields. It will sense soil moisture content in real-time and log values on the cloud server',
     description2: 'AFM is capable of measuring essential parameters of the environment including temperature, humidity, and soil moisture level in the percentage. the measured environment parameters help the user to act accordingly and keep plants happy if required.',
     currency: "USD",
@@ -74,9 +102,27 @@ export const inventory: InventoryProduct[] = [
     images: [
       "/products/sense-ball/2.jpeg",
     ],
-    features: ["Acoustic Signatures Detection", 'Measures Temperature, Gaseous, Parameters, Humidity.', 'Light Intensity Measurement', 'GPS Tracking'],
-    sensingRanges: ["Temperature range: -20 – 60°C", 'Relative humidity: 0 – 100 %RH', 'CO2 concentration ranges: 400 – 8192 ppm', 'TVOC concentration ranges: 0– 1187 ppb'],
-    applications: ["Agricultural Storages", 'Industrial Storages', 'Commercial Warehouses', 'Armed Forces Depots', 'Supply Chain', 'Wildlife Management Authority', 'Progressive Farmers'],
+    features: [
+      "Acoustic Signatures Detection", 
+      'Measures Temperature, Gaseous, Parameters, Humidity.', 
+      'Light Intensity Measurement', 
+      'GPS Tracking'
+    ],
+    sensingRanges: [
+      "Temperature range: -20 – 60°C", 
+      'Relative humidity: 0 – 100 %RH', 
+      'CO2 concentration ranges: 400 – 8192 ppm', 
+      'TVOC concentration ranges: 0– 1187 ppb'
+    ],
+    applications: [
+      "Agricultural Storages", 
+      'Industrial Storages', 
+      'Commercial Warehouses', 
+      'Armed Forces Depots', 
+      'Supply Chain', 
+      'Wildlife Management Authority', 
+      'Progressive Farmers'
+    ],
     description1: `Sense Ball is an IoT-based smart device that is capable of measuring environmental parameter's levels especially for storages. It will transmit data periodically through any kind of IoT network including Wi-Fi, GSM/GPRS/LoRA/Mesh technologies. Data will be sent to a web/mobile application for storage, alerts, and analytics.`,
     description2: 'A device that will revolutionize the monitoring of storage conditions like temperature, humidity, gas emission, light intensity, and acoustics related to multiple types of storage, supply chain as well as local facilities.',
     currency: "USD",
