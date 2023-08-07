@@ -7,11 +7,11 @@ const Page: React.FC = () => {
   return (
     <div>
       {/* <Navbar /> */}
-      <div className="px-52 my-10 flex">
+      <div className="my-10 flex px-52">
         <div className="text-justify">
           <div className="flex">
             <div className="flex-wrap">
-              <h1 className="font-semibold text-[44px]">
+              <h1 className="text-[44px] font-semibold">
                 Client <span className="text-blue-400">Reviews</span>
               </h1>
               <p className="text-md mt-5">
@@ -19,10 +19,10 @@ const Page: React.FC = () => {
               </p>
               <br />
               <p className="text-md">
-                At <span className="text-blue-400 font-bold">EmbedAIoT</span>, we believe that the best way to showcase our products is by letting our clients talk about them. That’s why we are sharing our clients’ feedback to give you an authentic picture of what it’s like to work with us. In addition, we take great pride in the success of our clients, and we are thrilled to report that our products have helped them achieve their goals. Our clients have described their experience with us as not just satisfactory but progressive and successful.
+                At <span className="font-bold text-blue-400">EmbedAIoT</span>, we believe that the best way to showcase our products is by letting our clients talk about them. That’s why we are sharing our clients’ feedback to give you an authentic picture of what it’s like to work with us. In addition, we take great pride in the success of our clients, and we are thrilled to report that our products have helped them achieve their goals. Our clients have described their experience with us as not just satisfactory but progressive and successful.
               </p>
             </div>
-            <div className="mt-5 mx-20">
+            <div className="mx-20 mt-5">
               <Image
                 src="/Client.png"
                 alt="Client Reviews"
@@ -33,11 +33,11 @@ const Page: React.FC = () => {
             </div>
           </div>
           <div className="mt-20">
-            <h1 className="font-bold text-[38px] text-center px-24 mt-5">
+            <h1 className="mt-5 px-24 text-center text-[38px] font-bold">
               Upgrade your lifestyle with our products<span className="text-blue-400"> that exceed expectations</span>
             </h1>
             <div>
-              <p className="mt-5 text-md text-justify">
+              <p className="text-md mt-5 text-justify">
                 We understand that choosing a product can be a difficult decision. That’s why we have made it our mission to provide the highest quality products that meet our clients’ needs. Our products are designed to deliver results and exceed expectations, and our clients’ feedback reflects that.
               </p>
               <p className="mt-5 text-md text-justify">

@@ -14,11 +14,11 @@ const page: React.FC = () => {
                         <h1 className='text-[40px] font-semibold'>Contact<span className='text-blue-400'> Us</span></h1>
                     </div>
                 </div>
-                <div>
+                {/* <div>
                     <p className='text-md mt-5'>
                         This is will the contact form
                     </p>  
-                </div>
+                </div> */}
                 <div>
                     <NewsletterForm />
                 </div>

@@ -2,9 +2,9 @@ import Image from "next/image"
 
 export function SiteFooter() {
   return (
-    <footer className="border-t px-10 py-10">
+    <footer className="border-t p-10">
       <div className="text-center">
-        <h1 className="font-bold text-[40px]">EmbedAIoT</h1>
+        <h1 className="text-[40px] font-bold">EmbedAIoT</h1>
       </div>
       <div className="mt-10 flex justify-center space-x-10">
         <div className="flex flex-col">

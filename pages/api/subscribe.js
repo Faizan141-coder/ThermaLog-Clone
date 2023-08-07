@@ -1,29 +1,7 @@
 // pages/api/subscribe.js
 import fs from 'fs';
-import Cors from 'cors'
 
-// Initialize the cors middleware
-const cors = Cors({
-  origin: 'https://embedaiot.vercel.app/', // Replace with your Next.js app's domain
-  methods: ['POST'], // Allow only POST requests
-});
-
-// Helper method to handle the cors middleware
-function runMiddleware(req, res, fn) {
-  return new Promise((resolve, reject) => {
-    fn(req, res, (result) => {
-      if (result instanceof Error) {
-        return reject(result);
-      }
-      return resolve(result);
-    });
-  });
-}
-
-export default async function handler(req, res) {
-
-  await runMiddleware(req, res, cors);
-
+export default function handler(req, res) {
   if (req.method === 'POST') {
     const { email } = req.body;
 

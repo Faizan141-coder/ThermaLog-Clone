@@ -7,11 +7,11 @@ const Page: React.FC = () => {
   return (
     <div>
       {/* <Navbar /> */}
-      <div className="px-52 my-10 flex">
+      <div className="my-10 flex px-52">
         <div className="text-justify">
           <div className="flex">
             <div className="flex-wrap">
-              <h1 className="font-semibold text-[44px]">
+              <h1 className="text-[44px] font-semibold">
                 Frequently Asked <span className="text-blue-400">Questions</span>
               </h1>
               <p className="text-md mt-5">
@@ -24,7 +24,7 @@ const Page: React.FC = () => {
                 We hope this page provides you with the information you need to make informed decisions about our products and services. Thank you for visiting.
               </p>
             </div>
-            <div className="mt-5 mx-20">
+            <div className="mx-20 mt-5">
               <Image
                 src="/faq.png"
                 alt="FAQ"

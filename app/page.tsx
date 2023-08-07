@@ -32,24 +32,24 @@ const Home: React.FC<HomeProps> = () => {
               <p className='text-md mt-5 text-justify'>
                   Everyone knows that food safety is one of the most important element for businesses in the food industry.
               </p>
-              <p className='mt-5 text-md text-justify'>
+              <p className='text-md mt-5 text-justify'>
                   With the constant threat of financial penalties, stock losses, and poor food handling and hygiene practices, it’s essential for businesses to stay on top of regulations to protect the health and safety of consumers.
               </p>
-              <p className='mt-5 text-md text-justify'>
+              <p className='text-md mt-5 text-justify'>
                   That’s why we developed our temperature monitoring system. Our system helps businesses stay compliant with government regulations for food safety, address the two-hour/four-hour rule, prevent stock losses with real-time pre-spoilage alerts, keep stock fresh with accurate temperature results and stay ahead of food safety with estimated bacterial growth monitoring.
               </p>
-              <p className='mt-5 text-md text-justify'>
+              <p className='text-md mt-5 text-justify'>
                   With our temperature monitoring system, you can say goodbye to operational headaches and save costs like labor, financial penalties and the time for recording temperature manually.
               </p>
               
-              <div className="flex justify-center items-center pt-5">
-                  <button onClick={() => router.push('/resources/guide')} className="rounded-full font-bold bg-white text-blue-500 border border-blue-500 hover:bg-blue-500 hover:text-white px-6 py-2 transition">
+              <div className="flex items-center justify-center pt-5">
+                  <button onClick={() => router.push('/resources/guide')} className="rounded-full border border-blue-500 bg-white px-6 py-2 font-bold text-blue-500 transition hover:bg-blue-500 hover:text-white">
                       Learn More
                   </button>
               </div>
 
               <div className="flex justify-center">
-                  <div className="w-full h-[0.3px] bg-blue-500 mt-8" />
+                  <div className="mt-8 h-[0.3px] w-full bg-blue-500" />
               </div>
 
             </div>
@@ -57,27 +57,27 @@ const Home: React.FC<HomeProps> = () => {
           </div>
 
         <div>
-            <h1 className='font-bold text-[35px] text-center px-24 pt-5'>Savings<span className="text-blue-400"> Estimator</span></h1>
+            <h1 className='px-24 pt-5 text-center text-[35px] font-bold'>Savings<span className="text-blue-400"> Estimator</span></h1>
             <div>
-              <p className='mt-5 text-md text-justify'>
+              <p className='text-md mt-5 text-justify'>
                   Relying on traditional methods to monitor and record temperature readings can result in various issues and challenges.
               </p>
-              <p className='mt-5 text-md text-justify'>
-                  <span className="text-blue-400 font-bold">1. </span>It can be costly, especially for multiple appliances or large areas
+              <p className='text-md mt-5 text-justify'>
+                  <span className="font-bold text-blue-400">1. </span>It can be costly, especially for multiple appliances or large areas
               </p>
-              <p className='mt-2 text-md text-justify'>
-                  <span className="text-blue-400 font-bold">2. </span>Human error may occur while reading and recording data
+              <p className='text-md mt-5 text-justify'>
+                  <span className="font-bold text-blue-400">2. </span>Human error may occur while reading and recording data
               </p>
-              <p className='mt-2 text-md text-justify'>
-                  <span className="text-blue-400 font-bold">3. </span>Timing is crucial; incidents between checks can lead to stock loss
+              <p className='text-md mt-5 text-justify'>
+                  <span className="font-bold text-blue-400">3. </span>Timing is crucial; incidents between checks can lead to stock loss
               </p>
-              <p className='mt-2 text-md text-justify'>
-                  <span className="text-blue-400 font-bold">4. </span>Storing physical data takes up significant space.
+              <p className='text-md mt-5 text-justify'>
+                  <span className="font-bold text-blue-400">4. </span>Storing physical data takes up significant space.
               </p>
-              <p className='mt-5 text-md text-justify'>
+              <p className='text-md mt-5 text-justify'>
                   Use our saving calculator to calculate how much you can save daily and per annum by simply installing the automated temperature monitoring system.
               </p>
-              <p className='mt-5 text-md text-justify'>
+              <p className='text-md mt-5 text-justify'>
                   Contact us today to learn more about our solution and take the first step towards automating your temperature monitoring process.
               </p>
             </div>
@@ -91,7 +91,7 @@ const Home: React.FC<HomeProps> = () => {
               className="mt-10"
             />
             <div className="flex justify-center">
-              <div className="w-full h-[0.3px] bg-blue-500 mt-8" />
+              <div className="mt-8 h-[0.3px] w-full bg-blue-500" />
             </div>
           </div>
           <div>
