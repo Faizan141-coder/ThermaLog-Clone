@@ -71,8 +71,9 @@ export function SiteHeader() {
             {showCompanyDropdown && (
               <div className="absolute left-0 top-full rounded-md bg-sky-50 text-black" style={{ whiteSpace: 'nowrap'}}>
                 <p onClick={() => router.push('/company/about')} className="cursor-pointer rounded-md px-5 py-2 hover:bg-blue-400 hover:text-white">About Us</p>
+                <p onClick={() => router.push('/company/contact')} className="cursor-pointer rounded-md px-5 py-2 hover:bg-blue-400 hover:text-white">Contact Us</p>
                 <p onClick={() => router.push('/company/reviews')} className="cursor-pointer rounded-md px-5 py-2 hover:bg-blue-400 hover:text-white">Client Reviews</p>
-                <p onClick={() => router.push('/company/team')} className="cursor-pointer rounded-md px-5 py-2 hover:bg-blue-400 hover:text-white">Team</p>
+                <p onClick={() => router.push('/company/team')} className="cursor-pointer rounded-md px-5 py-2 hover:bg-blue-400 hover:text-white">Our Team</p>
               </div>
             )}
           </div>
