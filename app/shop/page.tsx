@@ -67,16 +67,16 @@ export default async function Page({ searchParams }: Props) {
           </div>
 
           <section aria-labelledby="products-heading" className="pb-24 pt-6">
-            <h2 id="products-heading" className="sr-only">
+            {/* <h2 id="products-heading" className="sr-only">
               Products
-            </h2>
-            <div className={cn("grid grid-cols-1 gap-x-8 gap-y-10", products.length > 0 ? 'lg:grid-cols-4' : 'lg:grid-cols-[1fr_3fr]')}>
+            </h2> */}
+            {/* <div className={cn("grid grid-cols-1 gap-x-8 gap-y-10", products.length > 0 ? 'lg:grid-cols-4' : 'lg:grid-cols-[1fr_3fr]')}> */}
               {/* <div className="hidden lg:block">
                 <ProductFilters />
               </div> */}
               
               <ProductGrid products={products}/>              
-            </div>
+            {/* </div> */}
           </section>
         </main>
       </div>
