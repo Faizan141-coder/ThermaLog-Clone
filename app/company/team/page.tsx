@@ -48,6 +48,17 @@ const Page: React.FC = () => {
               <p className="text-center">Nida Nabeel</p>
             </div>
         </div>
+        <h1 className='mt-5 px-24 pt-5 text-center text-4xl font-bold'><span className="text-blue-400">Team Members</span></h1>
+        <div className="my-5 flex flex-wrap items-start space-x-10">
+            <div>
+              <Image src='/persons/8.jpeg' alt='Naveen Akbar' width={150} height={30} className="mb-2 rounded-md" />
+              <p className="text-center">?</p>
+            </div>
+            <div>
+              <Image src='/persons/Kashif-Janjua.jpeg' alt='Kashif Janjua' width={150} height={30} className="mb-2 rounded-md" />
+              <p className="text-center">Kashif Janjua</p>
+            </div>
+        </div>
       </div>
       
     </div>
