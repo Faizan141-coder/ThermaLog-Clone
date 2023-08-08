@@ -35,8 +35,8 @@ export function ProductGrid({ products }: Props) {
 
           return (
             <Link key={product._id} href={`/products/${product.slug}`} passHref>
-              {/* <a className="group text-sm"> */}
-                <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg border-2 border-gray-200 bg-gray-100 group-hover:opacity-75 dark:border-gray-800">
+              <div className="text-center">
+                <div className="mx-auto mb-2 h-60 w-60 overflow-hidden rounded-lg border-2 border-gray-600">
                   <Image
                     placeholder="blur"
                     blurDataURL={`data:image/svg+xml;base64, ${toBase64(shimmer(225, 280))}`}
@@ -51,7 +51,7 @@ export function ProductGrid({ products }: Props) {
                 <p className="mt-2 font-medium">
                   {formatCurrencyString({ currency: product.currency, value: product.price })}
                 </p>
-              {/* </a> */}
+              </div>
             </Link>
           );
         }
