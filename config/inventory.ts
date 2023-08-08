@@ -31,10 +31,9 @@ export const inventory: InventoryProduct[] = [
     description: 'Our Smart Energy Meters are low-cost, non - invasive / invasive , indigenous designed plug and play IoT-based three phase smart AC energy meters. Smart AC Energy Meter captures 12 essential parameters of AC Power for each phase and transmits it wirelessly to the central cloud.',
     price: 46550, 
     image:
-      "/products/smart-energy-monitoring-device/1.jepg",
+      "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/braided-leather-belt.jpg",
     images: [
-      "/products/smart-energy-monitoring-device/2.jepg",
-      "/products/smart-energy-monitoring-device/3.jepg",
+      "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/braided-leather-belt.jpg",
     ],
     features: [
       "Measures more than 23 energy parameters", 
@@ -67,11 +66,9 @@ export const inventory: InventoryProduct[] = [
     description: `In agriculture, timely usage of water maintains the health of crops. Delayed Irrigation leads to loss of nutrition of crops and overly? early irrigation saturates land which leads to various fungal and algae disease attacks on crops and plants`,
     price: 46800, 
     image:
-      "/products/agri-farm-multimeter/1.jpeg",
+      "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/braided-leather-belt.jpg",
     images: [
-      "/products/agri-farm-multimeter/2.jpeg",
-      "/products/agri-farm-multimeter/3.jpeg",
-      "/products/agri-farm-multimeter/4.jpeg",
+      "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/braided-leather-belt.jpg",
     ],
     features: [
       "Standalone Solar Powered Device", 
@@ -98,9 +95,9 @@ export const inventory: InventoryProduct[] = [
     description: `“Sense ball” is small, battery powered device that can provide you with storage monitoring features like inside temperature, humidity, light intensity and gas emissions beside GPS tracker to monitor real time supply chain. `,
     price: 56800, 
     image:
-      "/products/sense-ball/1.jpeg",
+      "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/braided-leather-belt.jpg",
     images: [
-      "/products/sense-ball/2.jpeg",
+      "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/braided-leather-belt.jpg",
     ],
     features: [
       "Acoustic Signatures Detection", 
@@ -133,9 +130,9 @@ export const inventory: InventoryProduct[] = [
     name: "Multi Channel Power Analyzer",
     description: "Our Multi Channel Power Analyzer is a high-precision device designed for comprehensive electrical power analysis. It is capable of measuring voltage, current, power factor, harmonic distortion, and other critical parameters across multiple channels simultaneously.",
     price: 78900,
-    image: "/products/Mult-Channel-Power-Analyzer/1.jpeg",
+    image: "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/braided-leather-belt.jpg",
     images: [
-        "/products/Mult-Channel-Power-Analyzer/2.jpeg",
+        "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/braided-leather-belt.jpg",
     ],
     features: [
         "Simultaneous Multi-Channel Measurements",
@@ -168,9 +165,9 @@ export const inventory: InventoryProduct[] = [
     name: "Range Sensor",
     description: "Our Range Sensor is a versatile and accurate distance measuring device based on advanced laser technology. It provides precise distance measurements and can be used in various applications, including robotics, industrial automation, and smart city projects.",
     price: 2150,
-    image: "/products/Range-Sensor/1.jpeg",
+    image: "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/braided-leather-belt.jpg",
     images: [
-        "/products/Range-Sensor/2.jpeg",
+        "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/braided-leather-belt.jpg",
     ],
     features: [
         "Laser Distance Measurement",
@@ -204,9 +201,9 @@ export const inventory: InventoryProduct[] = [
     name: "Water Quality Monitoring System",
     description: "Our Water Quality Monitoring System is an advanced IoT-based solution designed for continuous monitoring of water parameters in various bodies of water. It provides real-time data on key indicators such as pH, dissolved oxygen, turbidity, and more.",
     price: 15400,
-    image: "/products/Water-Quality-Monitoring-System/1.jpeg",
+    image: "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/braided-leather-belt.jpg",
     images: [
-        "/products/Water-Quality-Monitoring-System/2.jpeg",
+        "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/braided-leather-belt.jpg",
     ],
     features: [
         "Real-time Water Quality Monitoring",
@@ -240,11 +237,9 @@ export const inventory: InventoryProduct[] = [
     name: "Wind Direction and Speed Sensor",
     description: "Our Wind Direction and Speed Sensor is a reliable and durable device designed to measure wind direction and velocity accurately. It is ideal for various applications, including weather monitoring, renewable energy systems, and environmental research.",
     price: 3580,
-    image: "/products/Wind-Direction-Wind-Speed/1.jpeg",
+    image: "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/braided-leather-belt.jpg",
     images: [
-        "/products/Wind-Direction-Wind-Speed/2.jpeg",
-        "/products/Wind-Direction-Wind-Speed/3.jpeg",
-        "/products/Wind-Direction-Wind-Speed/4.jpeg"
+        "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/braided-leather-belt.jpg"
     ],
     features: [
         "Combined Wind Direction and Speed Measurement",
