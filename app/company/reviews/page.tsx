@@ -1,12 +1,9 @@
 import Image from "next/image";
 import React from "react";
-// import Footer from "@/components/Footer";
-// import Navbar from "@/components/Navbar";
 
 const Page: React.FC = () => {
   return (
     <div>
-      {/* <Navbar /> */}
       <div className="my-10 flex px-52">
         <div className="text-justify">
           <div className="flex">
@@ -40,20 +37,19 @@ const Page: React.FC = () => {
               <p className="text-md mt-5 text-justify">
                 We understand that choosing a product can be a difficult decision. That’s why we have made it our mission to provide the highest quality products that meet our clients’ needs. Our products are designed to deliver results and exceed expectations, and our clients’ feedback reflects that.
               </p>
-              <p className="mt-5 text-md text-justify">
+              <p className="text-md mt-5 text-justify">
                 So, if you are still on the fence about working with us, take a look at our client reviews page. You will see for yourself how our products have made a positive impact on our clients’ lives.
               </p>
-              <p className="mt-5 text-md text-justify">
+              <p className="text-md mt-5 text-justify">
                 Overall, we are confident that you will find the authenticity, quality, and standards you are looking for in our products. In the end, we are grateful for the support and positive feedback we have received from our clients, and we are committed to maintaining the highest standards of excellence in all that we do.
               </p>
-              <p className="mt-5 text- text-[22px] font-bold text-justify">
+              <p className="text- mt-5 text-justify text-[22px] font-bold">
                 We would love to hear from you too.
               </p>
             </div>
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
     </div>
   );
 };

@@ -1,12 +1,9 @@
 import Image from "next/image";
 import React from "react";
-// import Footer from "@/components/Footer";
-// import Navbar from "@/components/Navbar";
 
 const Page: React.FC = () => {
   return (
     <div>
-      {/* <Navbar /> */}
       <div className="my-10 flex px-52">
         <div className="text-justify">
           <div className="flex">
@@ -44,7 +41,6 @@ const Page: React.FC = () => {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
     </div>
   );
 };
