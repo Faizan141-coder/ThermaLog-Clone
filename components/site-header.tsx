@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
-import { ChevronDown, Edit, SearchIcon, ShoppingBag } from "lucide-react"
+import { ChevronDown, Edit, SearchIcon } from "lucide-react"
 import { useShoppingCart } from "use-shopping-cart"
 import { useState } from "react"
 import { UserButton } from "@clerk/nextjs";
@@ -12,14 +12,18 @@ import { Input } from "@/components/ui/input"
 import { MainNav } from "@/components/main-nav"
 import { ThemeToggle } from "@/components/theme-toggle"
 import Image from "next/image"
+import { SanityProduct, inventory } from "@/config/inventory"
 
-export function SiteHeader() {
+interface Props {
+  product: SanityProduct
+}
+
+export function SiteHeader({ product }: Props) {
 
   const pathname = usePathname()
   const router = useRouter()
   const searchParams = useSearchParams()
   const { cartCount } = useShoppingCart()
-  // const defaultSearchQuery = searchParams.get('search') || ''
   const [isInputVisible, setIsInputVisible] = useState(false);
 
   const [showProductsDropdown, setShowProductsDropdown] = useState(false);
@@ -42,10 +46,6 @@ export function SiteHeader() {
     }
   }
 
-  // if (pathname.startsWith("/studio")) {
-  //   return null
-  // }
-
   const onSubmit = (event: React.SyntheticEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
@@ -59,7 +59,30 @@ export function SiteHeader() {
         <MainNav />
 
         <h1 className="cursor-pointer" onClick={() => router.push('/')}>Home</h1>
-        <h1 className="cursor-pointer" onClick={() => router.push('/shop')}>Products</h1>
+        <h1 className="cursor-pointer">
+          <div
+            className='relative'
+            onMouseEnter={() => toggleDropdown('products')}
+            onMouseLeave={() => toggleDropdown('products')}
+          >
+            <h1 className='flex cursor-pointer' onClick={() => router.push('/shop')}>
+              Products <ChevronDown />
+            </h1>
+            {showProductsDropdown && (
+              <div className="absolute left-0 top-full rounded-md bg-sky-50 text-black" style={{ whiteSpace: 'nowrap'}}>
+                {inventory.map((item) => ( 
+                  <p
+                    key={item.slug} 
+                    onClick={() => router.push(`/products/${item.slug}`)} 
+                    className="cursor-pointer rounded-md px-5 py-2 hover:bg-blue-400 hover:text-white"
+                  >
+                    {item.name}
+                  </p>
+                ))}
+              </div>
+            )}
+          </div>
+        </h1>
         <h1 className="cursor-pointer">
           <div
             className='relative'

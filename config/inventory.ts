@@ -4,6 +4,7 @@ interface InventoryProduct {
   id: string
   name: string
   image: string
+  slug: string
   images: string[]
   features: string[]
   sensingRanges: string[]
@@ -28,6 +29,7 @@ export const inventory: InventoryProduct[] = [
     id: "64da6006-a4bb-4555-af78-3467853eb75e",
     sku: "smart_energy_monitoring_device_1",
     name: "Smart Energy Monitoring Device",
+    slug: "smart-energy-monitoring-device",
     description: 'Our Smart Energy Meters are low-cost, non - invasive / invasive , indigenous designed plug and play IoT-based three phase smart AC energy meters. Smart AC Energy Meter captures 12 essential parameters of AC Power for each phase and transmits it wirelessly to the central cloud.',
     price: 46550, 
     image:
@@ -63,6 +65,7 @@ export const inventory: InventoryProduct[] = [
     id: "392167ff-2199-4211-b5d4-68a47729c1f9",
     sku: "agri_farm_multi_meter_1",
     name: "Agri Farm Multi Meter",
+    slug: "agri-farm-multi-meter",
     description: `In agriculture, timely usage of water maintains the health of crops. Delayed Irrigation leads to loss of nutrition of crops and overly? early irrigation saturates land which leads to various fungal and algae disease attacks on crops and plants`,
     price: 46800, 
     image:
@@ -92,6 +95,7 @@ export const inventory: InventoryProduct[] = [
     id: "392167gf-2199-4211-b5d4-68a47729c1f9",
     sku: "sense_ball_1",
     name: "Sense Ball",
+    slug: "sense-ball",
     description: `“Sense ball” is small, battery powered device that can provide you with storage monitoring features like inside temperature, humidity, light intensity and gas emissions beside GPS tracker to monitor real time supply chain. `,
     price: 56800, 
     image:
@@ -128,6 +132,7 @@ export const inventory: InventoryProduct[] = [
     id: "355167gf-2199-4211-b5d4-68a47729c1f9",
     sku: "multi_channel_power_analyzer_1",
     name: "Multi Channel Power Analyzer",
+    slug: "multi-channel-power-analyzer",
     description: "Our Multi Channel Power Analyzer is a high-precision device designed for comprehensive electrical power analysis. It is capable of measuring voltage, current, power factor, harmonic distortion, and other critical parameters across multiple channels simultaneously.",
     price: 78900,
     image: "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/braided-leather-belt.jpg",
@@ -163,6 +168,7 @@ export const inventory: InventoryProduct[] = [
     id: "344167gf-2199-4211-b5d4-68a47729c1f9",
     sku: "range_sensor_1",
     name: "Range Sensor",
+    slug: "range-sensor",
     description: "Our Range Sensor is a versatile and accurate distance measuring device based on advanced laser technology. It provides precise distance measurements and can be used in various applications, including robotics, industrial automation, and smart city projects.",
     price: 2150,
     image: "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/braided-leather-belt.jpg",
@@ -199,6 +205,7 @@ export const inventory: InventoryProduct[] = [
     id: "366167gf-2199-4211-b5d4-68a47729c1f9",
     sku: "water_quality_monitoring_system_1",
     name: "Water Quality Monitoring System",
+    slug: "water-quality-monitoring-system",
     description: "Our Water Quality Monitoring System is an advanced IoT-based solution designed for continuous monitoring of water parameters in various bodies of water. It provides real-time data on key indicators such as pH, dissolved oxygen, turbidity, and more.",
     price: 15400,
     image: "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/braided-leather-belt.jpg",
@@ -235,6 +242,7 @@ export const inventory: InventoryProduct[] = [
     id: "377167gf-2199-4211-b5d4-68a47729c1f9",
     sku: "wind_direction_speed_sensor_1",
     name: "Wind Direction and Speed Sensor",
+    slug: "wind-direction-and-speed-sensor",
     description: "Our Wind Direction and Speed Sensor is a reliable and durable device designed to measure wind direction and velocity accurately. It is ideal for various applications, including weather monitoring, renewable energy systems, and environmental research.",
     price: 3580,
     image: "https://fullstackdotso.nyc3.cdn.digitaloceanspaces.com/braided-leather-belt.jpg",

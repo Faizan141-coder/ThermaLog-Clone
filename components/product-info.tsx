@@ -76,7 +76,7 @@ export function ProductInfo({ product }: Props) {
           {brochureLinks[product.name] !== null ? (
             <Brochure link={brochureLinks[product.name] as string} />
           ) : (
-            <p>No Brochure exists for this product.</p>
+            <p>No Brochure exists for this product</p>
           )}
         </div>
       </form>
