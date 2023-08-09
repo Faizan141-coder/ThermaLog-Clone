@@ -19,10 +19,20 @@ export function SiteHeader() {
   const router = useRouter()
   const { cartCount } = useShoppingCart()
   const [isInputVisible, setIsInputVisible] = useState(false);
+  const [clickCounts, setClickCounts] = useState<{ [productId: string]: number }>({});
 
   const [showProductsDropdown, setShowProductsDropdown] = useState(false);
   const [showCompanyDropdown, setShowCompanyDropdown] = useState(false);
   const [showResourcesDropdown, setShowResourcesDropdown] = useState(false);
+
+  const handleProductClick = (productId: string) => {
+    setClickCounts((prevClickCounts) => ({
+      ...prevClickCounts,
+      [productId]: (prevClickCounts[productId] || 0) + 1,
+    }));
+
+    console.log(`Product ${productId} clicked! Click count: ${clickCounts[productId] || 1}`);
+  };
 
   const toggleDropdown = (dropdownName: string) => {
     switch (dropdownName) {
@@ -62,12 +72,28 @@ export function SiteHeader() {
             <h1 className='flex cursor-pointer' onClick={() => router.push('/shop')}>
               Products <ChevronDown />
             </h1>
-            {showProductsDropdown && (
+            {/* {showProductsDropdown && (
               <div className="absolute left-0 top-full rounded-md bg-sky-50 text-black" style={{ whiteSpace: 'nowrap'}}>
                 {inventory.map((item) => ( 
                   <p
                     key={item.slug} 
                     onClick={() => router.push(`/products/${item.slug}`)} 
+                    className="cursor-pointer rounded-md px-5 py-2 hover:bg-blue-400 hover:text-white"
+                  >
+                    {item.name}
+                  </p>
+                ))}
+              </div>
+            )} */}
+            {showProductsDropdown && (
+              <div className="absolute left-0 top-full rounded-md bg-sky-50 text-black" style={{ whiteSpace: 'nowrap' }}>
+                {inventory.map((item) => (
+                  <p
+                    key={item.slug}
+                    onClick={() => {
+                      handleProductClick(item.id); // Step 2: Call the click handler with the product ID
+                      router.push(`/products/${(item.slug)}`);
+                    }}
                     className="cursor-pointer rounded-md px-5 py-2 hover:bg-blue-400 hover:text-white"
                   >
                     {item.name}
