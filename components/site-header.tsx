@@ -1,28 +1,22 @@
 "use client"
 
 import Link from "next/link"
-import { usePathname, useRouter, useSearchParams } from "next/navigation"
-import { ChevronDown, Edit, SearchIcon } from "lucide-react"
-import { useShoppingCart } from "use-shopping-cart"
+import Image from "next/image"
 import { useState } from "react"
 import { UserButton } from "@clerk/nextjs";
+import { useRouter } from "next/navigation"
+import { useShoppingCart } from "use-shopping-cart"
+import { ChevronDown, Edit, SearchIcon } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { inventory } from "@/config/inventory"
+import { Button } from "@/components/ui/button"
 import { MainNav } from "@/components/main-nav"
 import { ThemeToggle } from "@/components/theme-toggle"
-import Image from "next/image"
-import { SanityProduct, inventory } from "@/config/inventory"
-
-interface Props {
-  product: SanityProduct
-}
 
 export function SiteHeader() {
 
-  const pathname = usePathname()
   const router = useRouter()
-  const searchParams = useSearchParams()
   const { cartCount } = useShoppingCart()
   const [isInputVisible, setIsInputVisible] = useState(false);
 
