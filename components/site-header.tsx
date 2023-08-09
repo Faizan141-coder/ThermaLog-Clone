@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { MainNav } from "@/components/main-nav"
 import { ThemeToggle } from "@/components/theme-toggle"
+import Image from "next/image"
 
 export function SiteHeader() {
 
@@ -100,6 +101,7 @@ export function SiteHeader() {
           <Button
             size="sm"
             variant="ghost"
+            title="Search"
             onClick={() => setIsInputVisible((prev) => !prev)}
           >
             <SearchIcon className="h-5 w-5" />
@@ -124,8 +126,8 @@ export function SiteHeader() {
           )}
 
           <Link href="/cart">
-            <Button size="sm" variant="ghost">
-              <ShoppingBag className="h-5 w-5 text-blue-500" />
+            <Button size="sm" variant="ghost" title="Cart">
+              <Image src='/logo.svg' alt="cart" width={25} height={25}/>
               <span className="ml-2 text-sm font-bold">{cartCount}</span>
               <span className="sr-only">Cart</span>
             </Button>
