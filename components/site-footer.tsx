@@ -17,11 +17,11 @@ export function SiteFooter() {
         </div>
         <div className="flex flex-col">
           <h1 className="text-[20px] font-bold text-blue-400">Website</h1>
-          <p>http://smartagritech.com</p>
+          <a href="https://embedaiot.vercel.app">https://embedaiot.vercel.app</a>
         </div>
         <div className="flex flex-col">
           <h1 className="text-[20px] font-bold text-blue-400">Email</h1>
-          <p>smartagritech@seecs.edu.pk</p>
+          <a href="mailto:m.shahzad.younis@gmail.com">m.shahzad.younis@gmail.com</a>
         </div>
       </div>      
       <div className="mx-auto mt-10">
