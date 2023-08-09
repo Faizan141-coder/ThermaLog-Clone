@@ -6,7 +6,7 @@ export function SiteFooter() {
       <div className="text-center">
         <h1 className="text-[40px] font-bold">EmbedAIoT</h1>
       </div>
-      <div className="mt-10 flex justify-center space-x-10">
+      <div className="mt-10 flex justify-center space-x-10 text-center">
         <div className="flex flex-col">
           <h1 className="text-[20px] font-bold text-blue-400">Office</h1>
           <p>SINES, NUST, H-12, Islamabad</p>
@@ -17,11 +17,11 @@ export function SiteFooter() {
         </div>
         <div className="flex flex-col">
           <h1 className="text-[20px] font-bold text-blue-400">Website</h1>
-          <a href="https://embedaiot.vercel.app">https://embedaiot.vercel.app</a>
+          <a href="https://embedaiot.vercel.app" className="hover:text-blue-500">https://embedaiot.vercel.app</a>
         </div>
         <div className="flex flex-col">
           <h1 className="text-[20px] font-bold text-blue-400">Email</h1>
-          <a href="mailto:m.shahzad.younis@gmail.com">m.shahzad.younis@gmail.com</a>
+          <a href="mailto:m.shahzad.younis@gmail.com" className="hover:text-blue-500">m.shahzad.younis@gmail.com</a>
         </div>
       </div>      
       <div className="mx-auto mt-10">
