@@ -18,7 +18,7 @@ const Brochure: React.FC<BrochureProps> = ({ link }) => {
         onClick={openBrochure}
         className="w-full bg-violet-600 py-6 text-base font-medium text-white hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-500"
       >
-        Download the Brochure
+        Download Brochure
       </Button>
     </div>
   );
