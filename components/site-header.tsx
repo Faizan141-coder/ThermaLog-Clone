@@ -72,26 +72,13 @@ export function SiteHeader() {
             <h1 className='flex cursor-pointer' onClick={() => router.push('/shop')}>
               Products <ChevronDown />
             </h1>
-            {/* {showProductsDropdown && (
-              <div className="absolute left-0 top-full rounded-md bg-sky-50 text-black" style={{ whiteSpace: 'nowrap'}}>
-                {inventory.map((item) => ( 
-                  <p
-                    key={item.slug} 
-                    onClick={() => router.push(`/products/${item.slug}`)} 
-                    className="cursor-pointer rounded-md px-5 py-2 hover:bg-blue-400 hover:text-white"
-                  >
-                    {item.name}
-                  </p>
-                ))}
-              </div>
-            )} */}
             {showProductsDropdown && (
               <div className="absolute left-0 top-full rounded-md bg-sky-50 text-black" style={{ whiteSpace: 'nowrap' }}>
                 {inventory.map((item) => (
                   <p
                     key={item.slug}
                     onClick={() => {
-                      handleProductClick(item.id); // Step 2: Call the click handler with the product ID
+                      handleProductClick(item.id); 
                       router.push(`/products/${(item.slug)}`);
                     }}
                     className="cursor-pointer rounded-md px-5 py-2 hover:bg-blue-400 hover:text-white"

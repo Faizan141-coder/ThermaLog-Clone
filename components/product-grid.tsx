@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { urlForImage } from "@/sanity/lib/image";
 import { XCircle } from "lucide-react";
 import { formatCurrencyString } from "use-shopping-cart";
@@ -14,6 +15,18 @@ interface Props {
 }
 
 export function ProductGrid({ products }: Props) {
+
+  const [clickCounts, setClickCounts] = useState<{ [productId: string]: number }>({});
+  
+  const handleProductClick = (productId: string) => {
+    setClickCounts((prevClickCounts) => ({
+      ...prevClickCounts,
+      [productId]: (prevClickCounts[productId] || 0) + 1,
+    }));
+
+    console.log(`Product ${productId} clicked! Click count: ${clickCounts[productId] || 1}`);
+  };
+
   if (products.length === 0) {
     return (
       <div className="mx-auto grid h-40 w-full place-items-center rounded-md border-2 border-dashed bg-gray-50 py-10 text-center dark:bg-gray-900">
@@ -34,7 +47,7 @@ export function ProductGrid({ products }: Props) {
           const firstImageUrl = urlForImage(product.images[0]).url();
 
           return (
-            <Link key={product._id} href={`/products/${product.slug}`} passHref>
+            <Link key={product._id} onClick={() => handleProductClick(product._id)} href={`/products/${product.slug}`} passHref >
               <div className="text-center">
                 <div className="mx-auto mb-2 h-60 w-60 overflow-hidden rounded-lg border-2 border-gray-600">
                   <Image
