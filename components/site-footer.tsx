@@ -4,7 +4,7 @@ export function SiteFooter() {
   return (
     <footer className="border-t p-10">
       <div className="text-center">
-        <h1 className="text-[40px] font-bold">EmbedAIoT</h1>
+        <h1 className="text-[40px] font-bold">EmbedAiOT</h1>
       </div>
       <div className="mt-10 flex justify-center space-x-10 text-center">
         <div className="flex flex-col">
@@ -26,7 +26,7 @@ export function SiteFooter() {
       </div>      
       <div className="mx-auto mt-10">
         <p className="text-center text-xs">
-          &copy; 2023 Store, Inc. All rights reserved.
+          &copy; 2023 EmbedAiOT, Inc. All rights reserved.
         </p>
       </div>
     </footer>
