@@ -115,7 +115,6 @@ export function SiteHeader() {
                 autoComplete="off"
                 placeholder="Search products..."
                 className="h-9 lg:w-[300px]"
-                // defaultValue={defaultSearchQuery}
               />
               <Button size="sm" variant="ghost" className="hidden">
                 <SearchIcon className="h-5 w-5" />
@@ -126,7 +125,7 @@ export function SiteHeader() {
 
           <Link href="/cart">
             <Button size="sm" variant="ghost">
-              <ShoppingBag className="h-5 w-5" />
+              <ShoppingBag className="h-5 w-5 text-blue-500" />
               <span className="ml-2 text-sm font-bold">{cartCount}</span>
               <span className="sr-only">Cart</span>
             </Button>
