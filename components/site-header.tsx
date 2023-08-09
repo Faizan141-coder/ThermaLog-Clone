@@ -18,7 +18,7 @@ interface Props {
   product: SanityProduct
 }
 
-export function SiteHeader({ product }: Props) {
+export function SiteHeader() {
 
   const pathname = usePathname()
   const router = useRouter()

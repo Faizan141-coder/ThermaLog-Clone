@@ -41,12 +41,6 @@ const Home: React.FC<HomeProps> = () => {
               <p className='text-md mt-5 text-justify'>
                   With our temperature monitoring system, you can say goodbye to operational headaches and save costs like labor, financial penalties and the time for recording temperature manually.
               </p>
-              
-              <div className="flex items-center justify-center pt-5">
-                  <button onClick={() => router.push('/resources/guide')} className="rounded-full border border-blue-500 bg-white px-6 py-2 font-bold text-blue-500 transition hover:bg-blue-500 hover:text-white">
-                      Learn More
-                  </button>
-              </div>
 
               <div className="flex justify-center">
                   <div className="mt-8 h-[0.3px] w-full bg-blue-500" />
