@@ -1,14 +1,13 @@
 "use client"
 
-import { useState } from "react"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { formatCurrencyString, useShoppingCart } from "use-shopping-cart"
 
 import { SanityProduct } from "@/config/inventory"
-// import { getSizeName } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { useToast } from "@/components/ui/use-toast"
+import Brochure from "@/components/Brochure"
 
 interface Props {
   product: SanityProduct
@@ -19,6 +18,16 @@ export function ProductInfo({ product }: Props) {
   const { addItem, incrementItem, cartDetails } = useShoppingCart()
   const { toast } = useToast()
   const isInCart = !!cartDetails?.[product._id]
+  
+  const brochureLinks: Record<string, string | null> = {
+    'Smart Energy Monitoring Device': 'https://drive.google.com/file/d/1mm4U521ZuPeETGBn0sYaQ4KfICmbJiQ2/view?usp=drive_link',
+    'Sense Ball': 'https://drive.google.com/file/d/1m-gjHsKmKxFFDXeHsXa9ngVzw-JhMasJ/view?usp=drive_link',
+    'Agri Farm Multi Meter': 'https://drive.google.com/file/d/1U3v4G3IZRUCfzF7sQ4ma3_ET6LUMuo7F/view?usp=drive_link',
+    'Range Sensor': null,
+    'Multi Channel Power Analyzer': null,
+    'Water Quality Monitoring System': null,
+    'Wind Direction and Speed Sensor': null,
+  };
  
   const addToCart = () => {
     const item = {
@@ -62,6 +71,13 @@ export function ProductInfo({ product }: Props) {
           >
             Add to cart
           </Button>
+        </div>
+        <div className="mt-5 text-center">
+          {brochureLinks[product.name] ? (
+            <Brochure link={brochureLinks[product.name]} />
+          ) : (
+            <p>No Brochure exists for this product.</p>
+          )}
         </div>
       </form>
 
