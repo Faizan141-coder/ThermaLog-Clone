@@ -73,8 +73,8 @@ export function ProductInfo({ product }: Props) {
           </Button>
         </div>
         <div className="mt-5 text-center">
-          {brochureLinks[product.name] ? (
-            <Brochure link={brochureLinks[product.name]} />
+          {brochureLinks[product.name] !== null ? (
+            <Brochure link={brochureLinks[product.name] as string} />
           ) : (
             <p>No Brochure exists for this product.</p>
           )}
